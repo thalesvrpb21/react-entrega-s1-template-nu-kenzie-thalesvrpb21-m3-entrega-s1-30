@@ -1,0 +1,41 @@
+.card-li{
+    background-color: var(--grey-1);
+
+    padding: 4px 15px;
+
+    border-radius: var(--radius-1);
+
+    margin-bottom: 20px;    
+}
+
+.card-li div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-li div img{
+    width: 20px;
+    height: 15px;
+
+    background-color:  var(--grey-1);
+
+    padding: 7px;
+
+    cursor: pointer;
+
+    border-radius: var(--radius-1);
+}
+
+.sombra-entrada{
+    box-shadow: -4px 0 1px 0 var(--green);  
+}
+
+.sombra-despesas{
+    box-shadow: -4px 0 1px 0 var(--grey-2); 
+}
+
+.card-li p{
+    margin-top: -5px;
+}
+

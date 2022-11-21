@@ -1,0 +1,48 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px;
+
+    background-color: var(--grey-1);
+
+    margin-bottom: 40px;
+}
+
+.header strong{
+    color: var(--color-primary);
+}
+
+.header h1{
+    font-size: var(--rem-1);
+}
+
+.header button{
+    height: 35px;
+    width: 65px;
+
+    border: none;
+    border-radius: var(--radius-2);
+
+    font-weight: 600;
+
+    font-size: var(--rem-3);
+
+    background-color: var(--grey-2);
+
+    cursor: pointer;
+
+    transition: 1.2s;
+}
+
+.header button:hover{
+    background-color: var(--color-primary);
+    color: var(--white);
+}
+
+@media (width >699px){
+    .header{
+        padding: 25px 160px;
+    }
+}

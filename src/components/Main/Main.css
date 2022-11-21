@@ -1,0 +1,211 @@
+.main{
+    padding: 0 25px;
+
+    display: flex;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.novo-valor{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.main .card{
+    border: 1px solid var(--grey-2);
+    border-radius: var(--radius-1);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    width: 85%;
+
+    padding: 10px 20px;
+
+}
+
+.main .card div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .card div p{
+   padding: 0 25px 0 0;
+}
+
+.main .card div input{
+    width: 30%;
+    height: 25px;
+
+    padding: 0 15px;
+
+    border: 1px solid var(--grey-2);
+    border-radius: var(--radius-1);
+}
+
+.main .card div input:focus{
+    outline: 2px solid var(--color-primary);
+}
+
+.main .card div select{
+    width: 40%;
+    height: 25px;
+
+    outline: none;
+
+    padding: 0 10px;
+
+    border: 1px solid var(--grey-2);
+    border-radius: var(--radius-1);
+}
+
+.main .card div select:focus{
+    border: 1px solid var(--color-primary);
+}
+
+.card form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;   
+}
+
+.card form .input-descricao{
+    border: 1px solid var(--grey-2);
+    border-radius: var(--radius-1);
+
+    height: 30px;
+
+    padding: 0 20px; 
+}
+
+.card form .input-descricao::placeholder{
+    color: var(--grey-3);
+
+    font-size: var(--rem-5);
+}
+
+.card form .span-ex{
+    font-size: var(--rem-4);
+
+    color: var(--grey-3);
+}
+
+.card form .input-descricao:focus{
+    outline: 2px solid var(--color-primary);
+}
+
+.card form button{
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: var(--radius-2);
+
+    background-color: var(--color-primary);
+    color: var(--white);
+
+    cursor: pointer;
+
+    
+}
+
+.card form button:hover{
+    opacity: 0.75;
+    
+}
+
+.caixa-btn{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.caixa-btn div{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.caixa-btn h3{
+    font-size: 1rem;
+}
+
+.caixa-btn button{
+    padding: 10px 13px;
+
+    border-radius: var(--radius-2);  
+    border: none;
+
+    background-color: var( --grey-2);
+
+    cursor: pointer;
+}
+
+.caixa-btn button:focus{
+    background-color: var(--color-primary);
+    color: var(--white);
+
+    outline: none;
+}
+
+.card-total{
+    border: 1px solid var(--grey-2);
+    border-radius: var(--radius-1);
+
+    padding: 10px 30px;
+
+    width: 78%;
+}
+
+.caixa-total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.caixa-total span{
+    color: var(--color-primary);
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card-total p{
+    margin-top: -10px;
+    font-size: var(--rem-3);
+}
+
+@media(width > 699px){
+    .main{
+        flex-direction: row;
+
+        padding: 0 160px;
+    }
+    .main .card{
+        width: 300px;
+        padding: 25px 20px;
+    }
+    .card-total{
+        width: 280px;
+    }
+    .caixa-btn{
+        justify-content: space-between;
+        flex-direction: row;
+
+     
+    }
+    .caixa-btn div{
+        margin-top: 0;
+    }
+}
+
+@media(width > 1359px){
+    .caixa-btn{
+        width: 630px;
+    }
+}

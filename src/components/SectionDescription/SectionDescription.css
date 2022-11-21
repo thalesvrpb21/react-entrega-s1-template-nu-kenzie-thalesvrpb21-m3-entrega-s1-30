@@ -1,0 +1,29 @@
+
+
+.description strong{
+    color: var(--color-primary);
+}
+
+.description h1{
+    color: var(--white);
+
+    font-size: var(--rem-1);
+}
+
+.description h2{
+    color: var(--white);
+
+    font-size: var(--rem-2);
+}
+
+.description p{
+    color: var(--white);
+
+    font-size: var(--rem-3);
+}
+
+@media (width > 699px){
+    .description{
+        width: 25%;
+    }
+}
