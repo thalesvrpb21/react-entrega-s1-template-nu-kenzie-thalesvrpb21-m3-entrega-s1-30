@@ -14,7 +14,7 @@ function BasePage() {
   const filtrandoTransicoes = filtro !== "Todos" ?
   transicoes.filter(element => element.opcao === filtro) :
   transicoes
-  console.log (filtro)
+  
 
 
   return (
