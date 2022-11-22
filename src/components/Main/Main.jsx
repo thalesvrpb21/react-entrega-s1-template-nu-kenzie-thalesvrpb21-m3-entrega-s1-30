@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "./Main.css"
+import uuid from 'react-uuid';
 
 function Main ({setTransicoes, children, transicoes, setFiltro}) {
 
@@ -7,8 +8,9 @@ function Main ({setTransicoes, children, transicoes, setFiltro}) {
         event.preventDefault()
 
         const obj = {
+            id: uuid(),
             descricao: descricao,
-            valor: valor,
+            valor: +valor,
             opcao: opcao
         }          
 

@@ -17,18 +17,23 @@ export default List
 function Card ({transicoes, filtro, filtrandoTransicoes, setTransicoes}){
 
     function deletar (index){
-        console.log(index)
+        
         const arrAtualizado = transicoes.filter((element, id) => id !== index)
         setTransicoes(arrAtualizado)
+
+        
     }
 
     if(filtro === "Todos"){
 
         return  filtrandoTransicoes.map((filtrandoTransicoes, index) =>{
-                    return <li key={index} className="card-li">
+                    return <li key={filtrandoTransicoes.id} id={filtrandoTransicoes.id} className="card-li">
                         <div>
                             <h3>{filtrandoTransicoes.descricao}</h3>
-                            <span>{`R$ ${filtrandoTransicoes.valor.toFixed(2).replace(".", ",")}`}</span>
+                            <span>{filtrandoTransicoes.valor.toLocaleString("pt-br", {
+                        style: "currency",
+                        currency: "BRL",
+                        })}</span>
                             <img src={lixo} alt="icone lixo" onClick={ () => deletar(index) }/>
                         </div>
                         <p>{filtrandoTransicoes.opcao}</p>
@@ -38,10 +43,13 @@ function Card ({transicoes, filtro, filtrandoTransicoes, setTransicoes}){
     else if (filtro === "Entrada"){
 
         return  filtrandoTransicoes.map((filtrandoTransicoes, index) =>{
-            return <li key={index} className="card-li sombra-entrada">
+            return <li key={filtrandoTransicoes.id} id={filtrandoTransicoes.id} className="card-li sombra-entrada">
                 <div>
                     <h3>{filtrandoTransicoes.descricao}</h3>
-                    <span>{`R$ ${filtrandoTransicoes.valor.toFixed(2).replace(".", ",")}`}</span>
+                    <span>{filtrandoTransicoes.valor.toLocaleString("pt-br", {
+                        style: "currency",
+                        currency: "BRL",
+                        })}</span>
                     <img src={lixo} alt="icone lixo" onClick={ () => deletar(index) }/>
                 </div>
                 <p>{filtrandoTransicoes.opcao}</p>
@@ -52,10 +60,13 @@ function Card ({transicoes, filtro, filtrandoTransicoes, setTransicoes}){
     else {
         
         return  filtrandoTransicoes.map((filtrandoTransicoes, index) =>{
-            return <li key={index} className="card-li sombra-despesas">
+            return <li key={filtrandoTransicoes.id} id={filtrandoTransicoes.id} className="card-li sombra-despesas">
                 <div>
                     <h3>{filtrandoTransicoes.descricao}</h3>
-                    <span>{`R$ ${filtrandoTransicoes.valor.toFixed(2).replace(".", ",")}`}</span>
+                    <span>{filtrandoTransicoes.valor.toLocaleString("pt-br", {
+                        style: "currency",
+                        currency: "BRL",
+                        })}</span>
                     <img src={lixo} alt="icone lixo" onClick={ () => deletar(index) }/>
                 </div>
                 <p>{filtrandoTransicoes.opcao}</p>
